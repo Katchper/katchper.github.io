@@ -12,13 +12,14 @@
 }
 @font-face {
     font-family: PTsansBoldIt;
-    src: url(/fonts/PTSans/PTSans-bold.ttf);
+    src: url(/fonts/PTSans/PTSans-BoldItalic.ttf);
 }
 
 body {
     background: #eeeeee;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 p{
@@ -38,7 +39,7 @@ button{
     user-select: none; /* Standard syntax */
     position: -webkit-sticky; /* Safari */
     position: sticky;
-
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Optional: vertically center-aligns text and buttons */
@@ -87,9 +88,39 @@ button{
 }
 
 .middleBox{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     height: 700px;
     width: 100%;
+    background: bisque;
 }
+
+.middleLeft{
+    height: 700px;
+    float: left;
+    width: 50%;
+    background: #daffc4;
+}
+
+.leftTop{
+    height: 350px;
+    width: 100%;
+    background: #c4e8ff;
+}
+.leftBottom{
+    height: 350px;
+    width: 100%;
+    background: #e4c4ff;
+}
+
+.middleRight{
+    height: 700px;
+    width: 50%;
+    background: #ffc4ea;
+    align-content: center;
+}
+
 
 .descriptionBox{
     height: 500px;
@@ -99,11 +130,125 @@ button{
 }
 
 .hireBox{
-    height: 300px;
+    height: 400px;
+    width: 100%;
+
+}
+
+.hireText{
+    height: 200px;
+    width: 100%;
+    background: #ad5bba;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.italicText{
+    font-family: PTsansBoldIt, serif;
+    font-size: 64px;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+}
+
+.contactButton{
+    align-content: center;
+    height: 200px;
     width: 100%;
 }
+
+.bigButton{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    height: 150px;
+    font-family: PTsansBold, serif;
+    font-size: 64px;
+    border-radius: 50px;
+    -webkit-box-shadow: 3px 4px 21px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 3px 4px 21px 1px rgba(0,0,0,0.4);
+    box-shadow: 3px 4px 21px 1px rgba(0,0,0,0.4);
+    border: 0;
+    background: rgba(199, 170, 170, 0.3);
+
+}
+.bigButton:hover{background: rgba(199, 170, 170, 0.5);}
+.bigButton:active{background: rgba(199, 170, 170, 0.6);}
+
 
 .footer{
     height: 150px;
     width: 100%;
+    background: #470606;
+}
+
+.leftFooter{
+    float: left;
+    width: 33%;
+    height: 100%;
+    background: #fda0a0;
+}
+.middleFooter{
+    float: left;
+    width: 34%;
+    height: 100%;
+    background: #271818;
+}
+
+.rightFooter{
+    float: right;
+    width: 33%;
+    height: 100%;
+    background: #cca9a9;
+}
+
+.portrait{
+    border-radius: 50px;
+    height: 400px;
+    width: 400px;
+    outline: 2px solid black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-user-drag: none;
+    margin-left: 15%;
+}
+
+.iconButton{
+    width: 100px;
+    height: 100px;
+    filter: brightness(0) grayscale(100%) drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+    -webkit-user-drag: none;
+    cursor: pointer;
+
+}
+
+.iconButton:hover{
+    filter: brightness(0.15) grayscale(100%) drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+}
+
+.minorHeader{
+    padding-top: 40px;
+    padding-left: 3%;
+    padding-bottom: 20px;
+    font-family: PTsansBold, serif;
+    color: #000000;
+    font-size: 64px;
+}
+.subtext{
+    padding-left: 3%;
+    font-family: PTsansReg, serif;
+    color: #000000;
+    font-size: 32px;
+}
+.titleText{
+    font-family: PTsansReg, serif;
+    color: #5A0000;
+    font-size: 64px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.subtitleText{
+    font-family: PTsansReg, serif;
+    color: #000000;
+    font-size: 36px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
