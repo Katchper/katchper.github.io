@@ -1,168 +1,24 @@
 <!DOCTYPE html>
-
-
-
 <html lang="en" content="width=device-width">
 
+
+<!-- HTML Head Section -->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="divCss.css">
-    <script src="p5.js"></script>
-    <title>KatchPog</title>
-    
-    
-    
-    <script>
-        var cnv;
-    
-        function setup() {
-            var canvasDiv = document.getElementById('rightSect');
-            var widthDiv = canvasDiv.offsetWidth;
-            
-            cnv = createCanvas(widthDiv-2, 800, WEBGL);
-            cnv.parent('rightSect');
-        }
-        
-        let angle = 0;
-        let angleChange = Math.random() * 0.01 + 0.002;
-        
-        let anglex = Math.random() * 2 + 0.01;
-        let angley = Math.random() * 2 + 0.01;
-        let anglez = Math.random() * 2 + 0.01;
-        
-        let anglex1 = Math.random() * 2 + 0.01;
-        let angley2 = Math.random() * 2 + 0.01;
-        let anglez3 = Math.random() * 2 + 0.01;
-
-
-        function draw() {
-            background(0);
-            
-            stroke('rgb(0,255,0)');
-            strokeWeight(3);
-            rotateX(angle * anglex);
-            rotateY(angle * angley);
-            rotateZ(angle * anglez);
-            noFill();
-            box(50);
-            box(60);
-            
-            rotateX(angle * anglex1);
-            rotateY(angle * angley2);
-            rotateZ(angle * anglez3);
-            noStroke();
-            fill(0, 255, 0);
-            torus(80, 2);
-            
-            rotateX(angle / anglex);
-            rotateY(angle / angley);
-            rotateZ(angle / anglez);
-            
-            torus(80, 2);
-            angle += angleChange;
-            
-        }
-        
-        function windowResized() {
-            var divDetails = document.getElementById('rightSect');
-            var tempWidth = divDetails.offsetWidth;
-            resizeCanvas(tempWidth-2, 800);
-        }
-        
-    </script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Katchcode</title>
 
 </head>
 
+
+<!-- HTML Body Section -->
 <body>
-
-
-
-
-
-    <div class="topPart">
-    
-        <div class="topSector">
-        <b>Katchcode</b>
-        <br>
-        <div class="subHeading">search up the bird: Pycnonotus cafer</div> 
-        </div>
-        
+    <div class="topContainer">
+        <p class="mainHeader">Katchcode</p>
+        <button>About</button>
+        <button>Projects</button>
+        <button>Contact</button>
     </div>
 
-    <div class="middleSector">
-
-        <div class="leftBox" id="binaryAnimation">
-            <canvas style="background-color: red;width:100%;height:100%">
-            </canvas>
-        </div>
-        
-        <div class="middleBox">
-        <img class="spinnerP2" src="Images/hexagonPart1.png" alt="spinning wheel segment 1" >
-        <img class="spinnerP1" src="Images/hexagonPart2.png" alt="spinning wheel segment 2" >
-        </div>
-        
-        <div class="rightBox" id="rightSect">
-        
-        </div>
-
-    </div>
-
-
-
-    <div class="bottomSector">
-        Hi you're at the bottom
-    </div>
-
-    <div class="coverUp">
-        <br>
-        <b>What you looking down here for O-O</b>
-    </div>
-
-
-    <script>
-    var matrixCanvas = document.querySelector('canvas'),
-    ctx = matrixCanvas.getContext('2d');
-    
-    if (window.innerWidth < 800) {
-    matrixCanvas.width = window.innerWidth
-    } else {
-    matrixCanvas.width = window.innerWidth * 0.3;
-    }
-    
-    matrixCanvas.height = window.innerHeight
-
-    var letters = '10 ';
-    letters = letters.split('');
-
-    var fontSize = 12,
-    columns = matrixCanvas.width / fontSize;
-
-    var drops = [];
-    for (var i = 0; i < columns; i++) {
-    drops[i] = 1;
-    }
-
-    function drawMatrix() {
-
-        columns = matrixCanvas.width / fontSize;
-        ctx.fillStyle = 'rgba(0, 0, 0, .1)';
-        ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-        for (var i = 0; i < drops.length; i++) {
-            var text = letters[Math.floor(Math.random() * letters.length)];
-            ctx.fillStyle = '#0f0';
-            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-            drops[i]++;
-            if (drops[i] * fontSize > matrixCanvas.height && Math.random() > .95) {
-                drops[i] = 0;
-            }
-        }
-    }
-
-    setInterval(drawMatrix, 33);
-
-    </script>
 
 </body>
-
 </html>

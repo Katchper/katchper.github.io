@@ -1,0 +1,25 @@
+body {
+    background: #eeeeee;
+    margin: 0;
+    padding: 0;
+}
+
+.topContainer{
+    margin: 0;
+    padding: 0;
+    height: 170px;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(60, 19, 19), rgb(90, 0, 0), rgb(90, 0, 0));
+
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+button{
+    margin: 0;
+    padding: 0;
+}
