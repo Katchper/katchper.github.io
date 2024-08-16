@@ -30,7 +30,16 @@
 
 <div class="titleSection">
     <p class="standardTitle">About Me</p>
+    <p class="aboutTop">2024 Graduate from Aberystwyth University. Achieving a 2:1 Bachelors Degree in Computer Science.</p>
+    <p class="aboutTopSub">A passionate coder, problem solver and striving to improve.</p>
 </div>
+
+<button onclick="GFG_Fun()">
+    Click Here
+</button>
+
+<p id="GFG">
+</p>
 
 <div class="footer">
     <div class="leftF">
@@ -63,6 +72,12 @@
     }
     function gitClick() {
         window.open("https://github.com/Katchper", "_blank");
+    }
+    let elm = document.getElementById("GFG");
+
+    function GFG_Fun() {
+        elm.innerHTML = document.
+            documentElement.clientWidth + " pixels";
     }
 </script>
 </body>
