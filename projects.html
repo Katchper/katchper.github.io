@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" content="width=device-width">
-
-
-<!-- HTML Head Section -->
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="old/styles(old).css">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
     <title>Katchcode</title>
-    <meta charset="utf-8">
 </head>
 
-
-<!-- HTML Body Section -->
 <body>
-<div class="topContainer">
-    <a href="old/index(old).html">
-        <button class="topChild mainHeader">Katchcode</button>
-    </a>
-    <div class="buttons">
-        <a href="about.html">
-            <button class="headerButton">About</button>
-        </a>
-        <a href="projects.html">
-            <button class="headerButton" disabled>Projects</button>
-        </a>
-        <a href="contact.html">
-            <button class="headerButton">Contact</button>
-        </a>
-
+<div class="headerContainer">
+    <div class="header1">
+        <form style="display: inline" action="index.html" method="get">
+            <button class="topChild mainHeader">Katchcode</button>
+        </form>
     </div>
-
-</div>
-
-<p>projects</p>
-
-
-<div class="footer">
-    <div class="leftFooter">
-        <p class="footerName">Katchcode</p>
-    </div>
-    <div class="middleFooter">
-        <p class="copyrightText">Copyright 2024 © Kacper Dziedzic</p>
-    </div>
-    <div class="rightFooter">
-        <p class="footerText">Contact Me</p>
+    <div class="header2">
         <div class="buttonContainer">
-            <img src="images/Links/email.png" class="footerIcon" alt="email">
-            <img src="images/Links/facebook.png" class="footerIcon" alt="facebook">
-            <img src="images/Links/linkedin.png" class="footerIcon" alt="linkedin">
-            <img src="images/Links/github.png" class="footerIcon" alt="github">
+            <form style="display: inline" action="about.html" method="get">
+                <button class="headerButton">About</button>
+            </form>
+            <form style="display: inline" action="projects.html" method="get">
+                <button class="headerButton" disabled>Projects</button>
+            </form>
+            <form style="display: inline" action="contact.html" method="get">
+                <button class="headerButton">Contact</button>
+            </form>
         </div>
     </div>
 </div>
-<div class="filler"></div>
+<div class="footer">
+    <div class="leftF">
+        <p class="footerName">Katchcode</p>
+    </div>
+    <div class="middleF">
+        <p class="copyrightText">Copyright 2024 © Kacper Dziedzic</p>
+    </div>
+    <div class="rightF">
+        <p class="footerText">Contact Me</p>
+        <div class="baseContainer">
+            <img src="images/Links/email.png" class="footerIcon" alt="email" onclick="emailClick()">
+            <img src="images/Links/facebook.png" class="footerIcon" alt="facebook" onclick="fbClick()">
+            <img src="images/Links/linkedin.png" class="footerIcon" alt="linkedin" onclick="linClick()">
+            <img src="images/Links/github.png" class="footerIcon" alt="github" onclick="gitClick()">
+        </div>
+    </div>
+</div>
 
+
+<script>
+    function fbClick() {
+        window.open("https://www.facebook.com/people/Kacper-Dziedzic/pfbid0enPADNt3sTbKaPDFvymZ2xS7ZcNK9uYvFZYGwYtFw8tdY9bRSkhkCWGJofdaaeU3l/", "_blank");
+    }
+    function linClick() {
+        window.open("https://www.linkedin.com/in/kacper-dziedzic-8183401a3/", "_blank");
+    }
+    function emailClick() {
+        window.location.href = "mailto:kacperdziedzic2003@gmail.com";
+    }
+    function gitClick() {
+        window.open("https://github.com/Katchper", "_blank");
+    }
+</script>
 </body>
 </html>
-
