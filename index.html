@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" content="width=device-width">
-
-
-<!-- HTML Head Section -->
+<html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
-    <title>Katchcode</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 
-
-<!-- HTML Body Section -->
 <body>
-    <div class="topContainer">
-        <button class="topChild mainHeader">Katchcode</button>
-        <div class="buttons">
-            <button class="headerButton">About</button>
-            <button class="headerButton">Projects</button>
-            <button class="headerButton">Contact</button>
+    <div class="headerContainer">
+        <div class="header1">
+            <form style="display: inline" action="index.html" method="get">
+                <button class="topChild mainHeader">Katchcode</button>
+            </form>
         </div>
-
+        <div class="header2">
+            <div class="buttonContainer">
+                <form style="display: inline" action="about.html" method="get">
+                    <button class="headerButton">About</button>
+                </form>
+                <form style="display: inline" action="projects.html" method="get">
+                    <button class="headerButton">Projects</button>
+                </form>
+                <form style="display: inline" action="contact.html" method="get">
+                    <button class="headerButton">Contact</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="middleBox">
-        <div class="middleLeft">
-            <div class="leftTop">
-                <p class="titleText">Kacper Dziedzic</p>
-                <p class="subtitleText">Software & Vision</p>
-            </div>
-            <div class="leftBottom">
-                <img src="images/Links/email.png" class="iconButton" alt="email">
-                <img src="images/Links/facebook.png" class="iconButton" alt="facebook">
-                <img src="images/Links/linkedin.png" class="iconButton" alt="linkedin">
-                <img src="images/Links/github.png" class="iconButton" alt="github">
-            </div>
+
+    <div class="topContainer">
+        <div class="leftTop">
+            <p class="titleText">Kacper Dziedzic</p>
+            <p class="subtitleText">Software & Vision</p>
         </div>
-        <div class="middleRight">
+        <div class="leftBottom">
+            <img src="images/Links/email.png" class="iconButton" alt="email" onclick="emailClick()">
+            <img src="images/Links/facebook.png" class="iconButton" alt="facebook" onclick="fbClick()">
+            <img src="images/Links/linkedin.png" class="iconButton" alt="linkedin" onclick="linClick()">
+            <img src="images/Links/github.png" class="iconButton" alt="github" onclick="gitClick()">
+        </div>
+        <div class="rightBox">
             <img src="images/Portrait/Capture.PNG" class="portrait" alt="Kacper">
         </div>
     </div>
@@ -42,48 +47,60 @@
         <div class="descriptionBox">
             <p class="minorHeader">Creative and logical mind.</p>
             <hr class="solid">
-            <p class="subtext">I specialize in software development & computer vision,
+            <p class="subtext"> &#x2022; &nbsp I specialize in <span class="bold-font"> software development & computer vision</span>,
                 focusing on projects that leverage my expertise in both fields. </p>
             <hr class="solid">
-            <p class="subtext">A keen eye for problem detection and a strong problem-solving mindset.
+            <p class="subtext"> &#x2022; &nbspA keen eye for <span class="bold-font">problem detection</span> and a strong  <span class="bold-font">problem-solving</span> mindset.
                 I excel at identifying challenges and creating effective solutions.</p>
             <hr class="solid">
-            <p class="subtext">Dedicated to hard work and continuous learning enabling me to address
+            <p class="subtext"> &#x2022; &nbspDedication to hard work and continuous learning enabling me to address
                 complex programming issues efficiently, ensuring the delivery of high-quality results.</p>
         </div>
     </div>
 
-    <div class="colourContainer">
-        <div class="hireBox">
-            <div class="hireText">
-                <p class="italicText">Let's Work Together</p>
-            </div>
-            <div class="contactButton">
+    <div class="hireContainer">
+        <div class="textContainer">
+            <p class="italicText">Let's Work Together</p>
+        </div>
+        <div class="contactContainer">
+            <form style="display: inline" action="contact.html" method="get">
                 <button class="bigButton">Contact Me</button>
-            </div>
+            </form>
         </div>
     </div>
-
     <div class="footer">
-        <div class="leftFooter">
+        <div class="leftF">
             <p class="footerName">Katchcode</p>
         </div>
-        <div class="middleFooter">
+        <div class="middleF">
             <p class="copyrightText">Copyright 2024 © Kacper Dziedzic</p>
         </div>
-        <div class="rightFooter">
+        <div class="rightF">
             <p class="footerText">Contact Me</p>
-            <div class="buttonContainer">
-                <img src="images/Links/email.png" class="footerIcon" alt="email">
-                <img src="images/Links/facebook.png" class="footerIcon" alt="facebook">
-                <img src="images/Links/linkedin.png" class="footerIcon" alt="linkedin">
-                <img src="images/Links/github.png" class="footerIcon" alt="github">
+            <div class="baseContainer">
+                <img src="images/Links/email.png" class="footerIcon" alt="email" onclick="emailClick()">
+                <img src="images/Links/facebook.png" class="footerIcon" alt="facebook" onclick="fbClick()">
+                <img src="images/Links/linkedin.png" class="footerIcon" alt="linkedin" onclick="linClick()">
+                <img src="images/Links/github.png" class="footerIcon" alt="github" onclick="gitClick()">
             </div>
         </div>
     </div>
 
 
 
+    <script>
+        function fbClick() {
+            window.location.href = "https://www.facebook.com/people/Kacper-Dziedzic/pfbid0enPADNt3sTbKaPDFvymZ2xS7ZcNK9uYvFZYGwYtFw8tdY9bRSkhkCWGJofdaaeU3l/";
+        }
+        function linClick() {
+            window.location.href = "https://www.linkedin.com/in/kacper-dziedzic-8183401a3/";
+        }
+        function emailClick() {
+            window.location.href = "mailto:kacperdziedzic2003@gmail.com";
+        }
+        function gitClick() {
+            window.location.href = "https://github.com/Katchper";
+        }
+    </script>
 </body>
 </html>
-
