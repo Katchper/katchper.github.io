@@ -153,7 +153,10 @@ body{
     grid-column: 1;
     grid-row: 2;
     background: #eeeeee;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
