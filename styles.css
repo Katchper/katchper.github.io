@@ -16,7 +16,7 @@
 }
 
 body {
-    background: #eeeeee;
+    background: #470606;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -39,7 +39,7 @@ button{
     user-select: none; /* Standard syntax */
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Optional: vertically center-aligns text and buttons */
@@ -73,6 +73,7 @@ button{
 }
 .headerButton:hover{background: #e1e1e1;}
 .headerButton:active{background: #b1b1b1;}
+.headerButton:disabled{background-color: darkgray; cursor: not-allowed;}
 
 .mainHeader{
     border: none;
@@ -91,21 +92,23 @@ button{
 }
 
 .middleBox{
+    background: #eeeeee;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-    height: 700px;
+    height: 600px;
     width: 100%;
+    z-index: 1;
 }
 
 .middleLeft{
-    height: 700px;
+    height: 600px;
     float: left;
     width: 50%;
 }
 
 .leftTop{
-    height: 350px;
+    height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -135,7 +138,7 @@ button{
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
-    height: 350px;
+    height: 300px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -157,7 +160,7 @@ button{
 .iconButton:active{filter: brightness(0.2) grayscale(100%) drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));}
 
 .middleRight{
-    height: 700px;
+    height: 600px;
     width: 50%;
     align-content: center;
 }
@@ -174,12 +177,16 @@ button{
 }
 
 .descriptionBox{
-    height: 500px;
+    height: 540px;
     width: 100%;
     background: rgba(199, 170, 170, 0.2);
     -webkit-box-shadow: 0 4px 21px 1px rgba(0,0,0,0.4);
     -moz-box-shadow: 0 4px 21px 1px rgba(0,0,0,0.4);
     box-shadow: 0 4px 21px 1px rgba(0,0,0,0.4);
+}
+
+.colourContainer{
+    background: #eeeeee;
 }
 
 .minorHeader{
@@ -192,10 +199,12 @@ button{
 }
 
 .subtext{
-    padding-left: 3%;
+    padding-left: 4%;
+    padding-right: 2%;
     font-family: PTsansReg, serif;
     color: #000000;
     font-size: 32px;
+    padding-bottom: 10px;
 }
 
 .hireBox{
@@ -247,10 +256,12 @@ button{
 
 
 .footer{
-    margin-top: 100px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     height: 150px;
     width: 100%;
-    background: #470606;
+    background: #954b4b;
     display: flex;           /* Use flexbox for alignment */
     justify-content: center; /* Center the container-div horizontally */
     align-items: center;
@@ -319,3 +330,41 @@ button{
 }
 .footerIcon:hover{opacity: 80%;}
 .footerIcon:active{opacity: 90%;}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    padding-left: 5%;
+    width: 90%;
+}
+
+.filler{
+    height: 1000px;
+    background: #470606;
+    overflow: auto;
+}
+
+.contactTitle{
+    padding-top: 30px;
+    padding-left: 50px;
+    font-family: PTsansReg, serif;
+    color: #5A0000;
+    font-size: 96px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.middleContact{
+
+}
+.contactInfo{
+    font-family: PTsansReg, serif;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+}
+
+.wrapper{
+    min-height: 100%;
+    position: relative;
+}

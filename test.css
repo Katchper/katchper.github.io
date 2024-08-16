@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #a1a1a1;
+}
+@media (max-width: 800px) {
+    body{
+        flex-direction: row;
+    }
+
+}
+.headerContainer{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color: #e38686;
+    position: sticky;
+    flex-direction: row;
+    z-index: 2;
+}
+.header1{
+    width: 50%;
+    height: 100%;
+    background-color: #983636;
+}
+.header2{
+    width: 50%;
+    height: 100%;
+    background-color: #d8b8b8;
+}
+@media (max-width: 800px) {
+    .headerContainer{
+        flex-direction: column;
+        height: 400px;
+    }
+    .header1{
+        width: 100%;
+    }
+    .header2{
+        width: 100%;
+    }
+}
+
+.topContainer{
+    height: 600px;
+    width: 100%;
+    background-color: #cd6c6c;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.rightBox{
+    grid-column: 2;
+    grid-row: 1 / 3;
+    background-color: #66a57f;
+}
+
+.leftTop{
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #0c0647;
+}
+.leftBottom{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #470606;
+}
+
+@media (max-width: 800px) {
+    .topContainer {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    .rightBox {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .leftBottom {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+.descriptionBox{
+    min-height: 20px;
+    height: 100%;
+    background-color: #369846;
+}
+
+.hireContainer{
+    height: 100%;
+    width: 100%;
+    background-color: #983671;
+    flex-direction: row;
+}
+
+.textContainer{
+    height: 100px;
+    background-color: black;
+}
+.buttonContainer{
+    height: 100px;
+}
+
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: #366098;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.leftF{
+    background-color: #c0f1c7;
+    grid-column: 1;
+    grid-row: 1;
+}
+.middleF{
+    background-color: #dff1c0;
+    grid-column: 2;
+    grid-row: 1;
+}
+.rightF{
+    background-color: #ccc0f1;
+    grid-column: 3;
+    grid-row: 1;
+}
+@media (max-width: 800px) {
+    .footer {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    .leftF{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .middleF{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .rightF{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+}
