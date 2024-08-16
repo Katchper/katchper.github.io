@@ -8,14 +8,40 @@
 
 <body>
     <div class="headerContainer">
-        <div class="header1"></div>
-        <div class="header2"></div>
+        <div class="header1">
+            <form style="display: inline" action="index.html" method="get">
+                <button class="topChild mainHeader">Katchcode</button>
+            </form>
+        </div>
+        <div class="header2">
+            <div class="buttonContainer">
+                <form style="display: inline" action="about.html" method="get">
+                    <button class="headerButton">About</button>
+                </form>
+                <form style="display: inline" action="projects.html" method="get">
+                    <button class="headerButton">Projects</button>
+                </form>
+                <form style="display: inline" action="contact.html" method="get">
+                    <button class="headerButton">Contact</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="topContainer">
-        <div class="leftTop"></div>
-        <div class="leftBottom"></div>
-        <div class="rightBox"></div>
+        <div class="leftTop">
+            <p class="titleText">Kacper Dziedzic</p>
+            <p class="subtitleText">Software & Vision</p>
+        </div>
+        <div class="leftBottom">
+            <img src="images/Links/email.png" class="iconButton" alt="email" onclick="emailClick()">
+            <img src="images/Links/facebook.png" class="iconButton" alt="facebook" onclick="fbClick()">
+            <img src="images/Links/linkedin.png" class="iconButton" alt="linkedin" onclick="linClick()">
+            <img src="images/Links/github.png" class="iconButton" alt="github" onclick="gitClick()">
+        </div>
+        <div class="rightBox">
+            <img src="images/Portrait/Capture.PNG" class="portrait" alt="Kacper">
+        </div>
     </div>
     <div class="descriptionBox"></div>
     <div class="hireContainer">
@@ -27,5 +53,22 @@
         <div class="middleF"></div>
         <div class="rightF"></div>
     </div>
+
+
+
+    <script>
+        function fbClick() {
+            window.location.href = "https://www.facebook.com/people/Kacper-Dziedzic/pfbid0enPADNt3sTbKaPDFvymZ2xS7ZcNK9uYvFZYGwYtFw8tdY9bRSkhkCWGJofdaaeU3l/";
+        }
+        function linClick() {
+            window.location.href = "https://www.linkedin.com/in/kacper-dziedzic-8183401a3/";
+        }
+        function emailClick() {
+            window.location.href = "mailto:kacperdziedzic2003@gmail.com";
+        }
+        function gitClick() {
+            window.location.href = "https://github.com/Katchper";
+        }
+    </script>
 </body>
 </html>
