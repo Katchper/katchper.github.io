@@ -32,6 +32,36 @@
     <p class="standardTitle">Projects</p>
 </div>
 
+<div class="colourContainer">
+    <button class="collapsible">
+        Chess Recreation
+        <img src="images/github.png" class="gitIcon" alt="github" width="60" height="60" onclick="p1()">
+    </button>
+    <div class="content">
+        <div class="mainBox">
+            <div class="projectDescript">
+                <p class="projectText">A Team Project to recreate Chess entirely with all the defined rules.
+                    Made using Java with the main package JavaFx to create a clean and structured User Interface.
+                    This Program includes: playing, saving, loading and replay. Utilising Scrum within the team
+                    to create an organised and efficient workflow.
+                </p>
+                <p class="projectText">Role: Full Stack Developer</p>
+            </div>
+            <div class="skillsBox">
+                <p class="skillText">Skills Used</p>
+                <div class="imageContainer">
+
+                </div>
+            </div>
+            <div class="imageShowcase">
+                <img src="images/Projects/Chess.PNG" class="projectImage" alt="github">
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="fillerSpace"></div>
+
 <div class="footer">
     <div class="leftF">
         <p class="footerName">Katchcode</p>
@@ -63,6 +93,40 @@
     }
     function gitClick() {
         window.open("https://github.com/Katchper", "_blank");
+    }
+
+    function p1() {
+        window.open("https://github.com/Katchper/chess-project", "_blank");
+    }
+    function p2() {
+        window.open("https://github.com/Katchper/chess-project", "_blank");
+    }
+    function p3() {
+        window.open("https://github.com/Katchper/chess-project", "_blank");
+    }
+    function p4() {
+        window.open("https://github.com/Katchper/chess-project", "_blank");
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+    var images = document.querySelectorAll('.collapsible img');
+    for (i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
     }
 </script>
 </body>
