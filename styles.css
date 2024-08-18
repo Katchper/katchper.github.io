@@ -666,13 +666,12 @@ hr.solid {
 .mainBox{
     background-image: linear-gradient(rgba(199, 170, 170, 0.5), rgba(199, 170, 170, 0.2));
     display: grid;
-    grid-template-columns: 55% 45%;
-    grid-template-rows: 60% 40%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     margin-bottom: 20px;
 }
 
 .projectDescript{
-    min-height: 100px;
     grid-column: 1;
     grid-row: 1;
     background-color: #470606;
@@ -680,17 +679,24 @@ hr.solid {
 }
 
 .skillsBox{
-    min-height: 100px;
     grid-column: 1;
     grid-row: 2;
     background-color: #064247;
     padding-bottom: 20px;
 }
 .imageShowcase{
-    min-height: 100px;
     grid-column: 2;
     grid-row: 1/3;
     background-color: #589197;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImage{
+    padding: 5%;
+    width: 100%;
+    height: auto;
 }
 
 .gitIcon{
@@ -709,9 +715,4 @@ hr.solid {
     height: 30px;
     width: 100%;
     background: #eeeeee;
-}
-
-.projectImage{
-    padding: 5%;
-    width: 100%;
 }
