@@ -64,6 +64,7 @@ body{
     .headerContainer{
         flex-direction: column;
         height: 160px;
+        position: relative;
     }
     .header1{
         text-align: center;
